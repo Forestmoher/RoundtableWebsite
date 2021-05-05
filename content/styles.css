@@ -1,0 +1,235 @@
+/****** Layout Section ******/
+
+:root {
+    /* css variables go here */
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0px auto;
+    padding-bottom: 50px;
+    background-color: white;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: grey;  
+}
+
+.nav-link {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.nav-link:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+@media screen and (max-width: 365px)
+{
+    #navbar {
+        transition: .2s ease-out;
+        transition-property: height;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 365px)
+{
+    #navbar {
+        transition: .2s ease-out;
+        transition-property: height;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 365px)
+{
+    .nav-link {
+        width: 100%;
+    }
+}
+
+.main {
+    height: auto;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.footer {
+    background-color: grey;
+    color: white;
+    border-top: 2px solid black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/****** Index page ******/
+#circle {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at 400px 400px, yellow, rgba(0, 0, 0, 0));
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
+    transform: scale(100%);
+}
+
+.title {
+    position: absolute;
+    font-size: 150px;
+    color: black;
+    z-index: 1;
+}
+
+#hidden-title {
+    display: none;
+}
+
+/****** About page ******/
+
+
+/****** Challenge Page ******/
+
+#file-input {
+    margin: 20px 0;
+}
+
+#result-box {
+    min-width: 200px;
+    min-height: 80px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: white;
+}
+
+#result-btn, #clear-btn{
+    margin: 10px 0;
+    width: 100px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 7px;
+}
+
+#result-btn {
+    background-color: green;
+}
+
+#clear-btn {
+    background-color: red;
+}
+
+#result-btn:hover {
+    background-color: rgb(0, 95, 0);
+    color: white;
+}
+
+#clear-btn:hover {
+    background-color: rgb(165, 1, 1);
+    color: white;
+}
+
+/****** Media Queries ******/
+
+/*Medium Screen Size*/
+@media screen and (min-width: 800px)
+{
+    #circle {
+        width: 500px;
+        height: 500px;
+        transition: .2s ease-out;
+        transition-property: height, width;
+    }
+
+    .title {
+        font-size: 150px;
+        transition: .2s ease-out;
+        transition-property: font-size;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    #circle {
+        width: 300px;
+        height: 300px;
+        transition: .2s ease-out;
+        transition-property: height, width;
+    }
+
+    .title {
+        font-size: 80px;
+        transition: .2s ease-out;
+        transition-property: font-size;
+    }
+}
+
+/*Small Screen Size*/
+@media screen and (min-width: 435px)
+{
+    #circle {
+        display: flex;
+        transition: .2s ease-out;
+        transition-property: display;
+    }
+}
+
+@media screen and (max-width: 435px)
+{
+    .main {
+        padding: 0;
+        background: linear-gradient(to bottom, white 0%, yellow 100%);
+    }
+    
+    #circle {
+        display: none;
+    }
+
+    #hidden-title, #hidden-title h1 {
+        text-align: center; 
+        display: block;
+        font-size: 150px;
+        margin: 0 auto;
+    }    
+
+    #hidden-title p{
+        font-size: 30px;
+        font-variant: small-caps;
+        margin: 0 auto;
+    }
+
+    .title {
+        display: none;
+    }
+}
