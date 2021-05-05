@@ -134,25 +134,13 @@ body {
     background-color: white;
 }
 
-#result-btn, #clear-btn{
+#clear-btn{
     margin: 10px 0;
     width: 100px;
     height: 30px;
     padding: 2px;
     border-radius: 7px;
-}
-
-#result-btn {
-    background-color: green;
-}
-
-#clear-btn {
     background-color: red;
-}
-
-#result-btn:hover {
-    background-color: rgb(0, 95, 0);
-    color: white;
 }
 
 #clear-btn:hover {
