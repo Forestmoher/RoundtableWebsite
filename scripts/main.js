@@ -12,6 +12,7 @@ function selectChallenge() {
 }
 
 function clearResult() {
-    //clear the output of the coding challenge from the UI
+    document.getElementById("result-box").innerHTML = '';
+    document.getElementById('options').value = "-- Select Date --";
 }
 
