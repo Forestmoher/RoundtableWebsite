@@ -21,6 +21,10 @@ body {
   background-color: var(--main-bg-color);
 }
 
+h1,h2,h3,h4,h5,h6 {
+  color: var(--text-color-dark);
+}
+
 #navbar {
   display: flex;
   flex-direction: row;
@@ -157,21 +161,17 @@ body {
 }
 /****** Challenge Page ******/
 
-#file-input {
-  margin: 20px 0;
-}
-
 #result-box {
-  min-width: 200px;
-  min-height: 80px;
+  min-width: 500px;
+  min-height: 300px;
   width: auto;
   height: auto;
-  border: 1px solid black;
+  border: 1px solid var(--neutral-color);
   padding: 10px;
   margin: 20px 0;
   background-color: white;
 }
-
+/* 
 #result-btn {
   background-color: var(--color-pop);
   width: 100px;
@@ -182,7 +182,7 @@ body {
 
 #result-btn:hover {
   background-color: #ccb966;
-}
+} */
 
 #clear-btn {
   background-color: rgb(252, 96, 96);
@@ -194,6 +194,89 @@ body {
 
 #clear-btn:hover {
   background-color: rgb(202, 76, 76);
+}
+
+#instructions-container, #code-container, #output-container {
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  background-color: var(--color-pop);
+  border-radius: 0 5px 5px 5px;
+}
+
+#code-container, #output-container{
+  display: none;
+}
+
+#tab-container {
+  width: 800px;
+  margin-top: 30px;
+}
+
+.tab {
+  height: 30px;
+  width: 120px;
+  float: left;
+  border-radius: 0;
+  background-color: white;
+  border: 1.5px solid var(--text-color-dark);
+  border-top: none;
+  border-bottom: none;
+  color: var(--text-color-dark);
+  font-weight: bold;
+}
+
+.tab:first-child {
+  border: none;
+  border-radius: 5px 0 0 0;
+}
+
+.tab:last-child {
+  border: none;
+  border-radius: 0 5px 0 0;
+}
+
+.tab-active {
+  background-color: var(--color-pop);
+}
+
+#instructions-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#instructions-text, #example-text {
+  background-color: white;
+  border: 1px solid var(--neutral-color);
+  padding: 5px 0 0 5px;
+  width: 75%;
+  height: 20%;
+}
+
+#code-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#code-box {
+  width: 80%;
+  height: 80%;
+  background-color: black;
+  color: lime;
+}
+
+#output-container {
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /****** Media Queries ******/

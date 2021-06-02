@@ -18,6 +18,18 @@ function selectChallenge() {
 function clearResult() {
     document.getElementById("result-box").innerHTML = '';
     document.getElementById('options').value = "-- Select Date --";
-    var newScriptTag = document.getElementById('challenge-script').remove();
+    document.getElementById('challenge-script').remove();
 }
 
+function showTab(container, tab){
+    var containers = document.getElementsByClassName("content-container");
+    for (let i = 0; i < containers.length; i++) {
+        containers[i].style.display = "none";
+    }
+    document.getElementById(container).style.display = "flex";
+    var tabs = document.getElementsByClassName("tab");
+    for (let j = 0; j < tabs.length; j++) {
+        tabs[j].style.backgroundColor = "white";
+    }
+    document.getElementById(tab).style.backgroundColor = 'var(--color-pop)';
+}
