@@ -1,10 +1,12 @@
-//Challenge
 
-//You are given a sequence of valid words as a string. 
-//Test if the string is made up by one or more of the words from the Array.
-
-//TasK:
-//Test if the string can be entirly made formed by concatonating words of the array.
+instructions = `Given a string of valid words, and an array or words, \
+test if the string is made up by one or more of the words from the Array.
+`
+example = `array = ['The', 'Tech', 'Roundtable'] <br>
+string1 = 'The Tech Roundtable' <br>
+string2 = 'A Tech Roundtable'<br>
+validWords(array,string1) ==> true <br>
+validWords(array,string2) ==> false`
 
 var words = ['The', 'Tech', 'Roundtable']
 
@@ -31,6 +33,8 @@ function validWords(array, string) {
 // console.log(validWords(words, sentence5))
 
 //Output to window here:
+document.getElementById("instructions-text").innerHTML = instructions;
+document.getElementById("example-text").innerHTML = example;
 document.getElementById("result-box").innerHTML =
     `Can you build 'sentence' from 'array'? <br><br>
 

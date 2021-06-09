@@ -3,6 +3,10 @@
 
 //*****Challenge Page code*****//
 
+// declaring variables that will be reasigned with each new script loaded in
+var instructions;
+var example;
+
 //dynamically load script tag into head tag based on option selected from dropdown
 function selectChallenge() {
     var file = document.getElementById('options').value;
@@ -16,6 +20,8 @@ function selectChallenge() {
 }
 
 function clearResult() {
+    document.getElementById("instructions-text").innerHTML = '';
+    document.getElementById("example-text").innerHTML = '';
     document.getElementById("result-box").innerHTML = '';
     document.getElementById('options').value = "-- Select Date --";
     document.getElementById('challenge-script').remove();
