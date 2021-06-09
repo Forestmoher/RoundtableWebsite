@@ -1,5 +1,5 @@
 
-instructions = `Given a string of valid words, and an array or words, \
+instructions = `Given a string of valid words, and an array or words,
 test if the string is made up by one or more of the words from the Array.
 `
 example = `array = ['The', 'Tech', 'Roundtable'] <br>
