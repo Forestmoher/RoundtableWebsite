@@ -32,6 +32,10 @@
       </select>
     </h1>
 
+    <button type="button" id="clear-btn" onclick="clearResult()">
+      Clear
+    </button>
+
     <div id="tab-container">
       <button id="intructions-tab" class="tab tab-active"
         onclick="showTab('instructions-container', 'intructions-tab')">Instructions</button>
@@ -41,9 +45,9 @@
 
     <div id="instructions-container" class="content-container">
       <h4>Challenge:</h4>
-      <div id="instructions-text">Challenge instructions go here</div>
+      <div id="instructions-text"></div>
       <h4>Example:</h4>
-      <div id="example-text">Code examples go here</div>
+      <div id="example-text"></div>
     </div>
 
     <div id="code-container" class="content-container">
@@ -52,12 +56,10 @@
 
     <div id="output-container" class="content-container">
       <div id="result-box"></div>
-      <button type="button" id="clear-btn" onclick="clearResult()">
-        Clear
-      </button>
     </div>
 
   </div>
+
 
   <!-- Footer -->
   <footer class="footer">&copy;Roundtable 2021</footer>

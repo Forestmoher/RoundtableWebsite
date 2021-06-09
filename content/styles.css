@@ -190,6 +190,7 @@ h1,h2,h3,h4,h5,h6 {
   height: 30px;
   padding: 2px;
   border-radius: 7px;
+  margin-top: 10px;
 }
 
 #clear-btn:hover {
