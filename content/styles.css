@@ -25,6 +25,10 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--text-color-dark);
 }
 
+p, div {
+  font-size: .9rem;
+}
+
 #navbar {
   display: flex;
   flex-direction: row;
@@ -170,6 +174,7 @@ h1,h2,h3,h4,h5,h6 {
   padding: 10px;
   margin: 20px 0;
   background-color: white;
+  overflow: auto;
 }
 /* 
 #result-btn {
@@ -256,6 +261,8 @@ h1,h2,h3,h4,h5,h6 {
   padding: 5px 0 0 5px;
   width: 75%;
   min-height: 20%;
+  max-height: 30%;
+  overflow: auto;
 }
 
 #code-container {
