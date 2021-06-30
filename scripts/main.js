@@ -39,3 +39,21 @@ function showTab(container, tab){
     }
     document.getElementById(tab).style.backgroundColor = 'var(--color-pop)';
 }
+
+//Flash card animations
+
+function flipCard() {
+    let card = document.getElementById('flashcard');
+    let answer = document.getElementById('flashcard-answer');
+    let question = document.getElementById('flashcard-question');
+
+    card.style.animation = 'flipCard .9s';
+    question.style.display = 'none';
+    let showCard = () => {
+       answer.style.animation = 'textFadeIn 1.5s'; 
+       answer.style.display = 'flex' ;
+    }
+                         
+    setTimeout(showCard,900)
+
+}
