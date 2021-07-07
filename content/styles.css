@@ -201,41 +201,67 @@ p, div {
 
 /****** Flashcard Page ******/
 
-.flashcard-container {
-  width: 600px;
-  height: 325px;
-  box-shadow: inset 0 0 4px #000000;
+.card {
+  margin: 100px auto;
+  width: 400px;
+  height: 600px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;  
+}
+
+.card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);
+}
+
+.card-front {
+  background-image: linear-gradient(to bottom right, var(--color-pop), var(--main-bg-color));
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-pop);
 }
 
-#flashcard {
-  margin: 0px auto;
-  text-align: center;
-  width: 90%;
-  height: 85%;
-  box-shadow: 0 0 4px var(--neutral-color);
-  border-radius: 5px;
-  background-color: white;
+.card-back {
+  background-color: var(--text-color-light);
+  transform: rotateY(180deg);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#flashcard-answer {
-  display: none;
+#question {
+  font-size: 32px;
 }
 
-@keyframes flipCard {
-  0% {transform: rotateX(0deg);}
-  100% {transform: rotateX(180deg);}
+#answer{
+  font-size: 20px;
+  padding: 0 40px;
 }
 
-@keyframes textFadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+#next-button {
+  border-radius: 6px;
+  background-color: var(--navbar-color);
+  color: var(--text-color-light);
+  padding: 5px;
+  margin: 10px 0;
+  cursor: pointer;
 }
 
 /****** Challenge Page ******/
@@ -280,8 +306,8 @@ p, div {
 #instructions-container, #code-container, #output-container {
   width: 800px;
   height: 500px;
-  background-color: white;
-  background-color: var(--color-pop);
+  background-image: linear-gradient(to bottom, var(--color-pop), var(--main-bg-color));
+
   border-radius: 0 5px 5px 5px;
 }
 
